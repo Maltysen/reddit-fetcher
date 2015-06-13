@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Reddit Fetcher NTP",
+  "description": "Makes the NTP background the latest image on a specified subreddit.",
+  "version": "0.2",
+
+  "icons": {
+    "48": "icon48.png"
+  },
+    
+  "chrome_url_overrides" : {
+    "newtab": "ntp.html"
+  },
+
+  "permissions": [
+    "http://reddit.com/",
+    "storage"
+  ],
+
+  "background": {
+    "scripts": ["jquery-2.1.4.min.js", "fetcher.js"]
+  },
+  
+  "options_page": "options.html"
+}

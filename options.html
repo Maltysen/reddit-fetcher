@@ -1,0 +1,29 @@
+<html>
+<head><title>Settings for Reddit Fetcher Extension</title></head>
+<body>
+
+<label for="subreddit">
+  Subreddit:<br>
+  /r/
+</label>
+
+<input id='subreddit'>    
+<br><br>
+
+Sorting order:<br>
+<input type="radio" name="sort" value="hot"> Hot<br>
+<input type="radio" name="sort" value="new"> New
+<br><br>
+
+Zooming Mode for Image:<br>
+<input type="radio" name="zoom" value="cover"> Cover - Set smaller dimension to fit exactly, lets rest of image outside of screen.<br>
+<input type="radio" name="zoom" value="contain"> Contain - Sets larger dimension to fit exactly, tiles other dimension. <br>
+<input type="radio" name="zoom" value="scale"> Scale - Changes aspect ratio, scales both dimensions to 100%.
+<br><br>
+
+<button id="save">Save</button>
+
+<script src="jquery-2.1.4.min.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
