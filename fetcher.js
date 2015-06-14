@@ -2,6 +2,9 @@ subreddit="pics"
 sort="hot"
 zoom="cover"
 
+image_pattern = /\.(png|jpg|gif|svg|jpeg)$/i
+imgur_pattern = /^http:\/\/imgur\.com\/[A-Za-z\d]{7}$/
+
 chrome.storage.sync.get({
       subreddit: "pics",
       sort: "hot",
@@ -9,12 +12,19 @@ chrome.storage.sync.get({
   }, function(items) {
       subreddit=items.subreddit
       sort=items.sort
-      set_zoom(items.zoom)
+      change_zoom(items.zoom)
   });
 
 function change_zoom(z) {
     zoom = z
     postMessage({type: "zoom_changed", zoom: zoom}, "*")
+}
+
+function query_imgur(url) {
+    $.get(url, function(data) {
+        img_url=url+"."+new RegExp('<img src="//i.imgur.com/' + url.slice(-7) + '\.(png|jpg|jpeg|gif|svg)').exec(data)[1]
+        query_image(img_url)
+    })
 }
 
 function query_reddit() {
@@ -24,19 +34,19 @@ function query_reddit() {
         for (i in posts) {
             post=posts[i]
 
-            if ("png jpg gif svg".indexOf(post.data.url.slice(-3))!=-1) {
+            if (image_pattern.test(post.data.url)) {
                 im_url_new=post.data.url
                 break
             }
 
-            /*else if (post.data.url.indexOf('imgur')!=-1) {
+            else if (imgur_pattern.test(post.data.url)) {
                 im_url_new=post.data.url
                 if (im_url!=im_url_new) {
                     im_url=im_url_new
                     query_imgur(im_url)
                 }
                 return
-            }*/
+            }
 
 
         }

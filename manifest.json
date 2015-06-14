@@ -14,7 +14,8 @@
   },
 
   "permissions": [
-    "http://reddit.com/",
+    "*://*.reddit.com/*",
+    "*://*.imgur.com/*",
     "storage"
   ],
 
