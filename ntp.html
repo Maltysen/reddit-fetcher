@@ -1,16 +1,49 @@
 <html>
  <head>
   <title>New Tab</title>
-  
+
   <style>
     body {
-	  background-size: cover;
-      transition: background-image 2s ease-in-out;
+        background: black;
     }
+
+    img {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        max-height: calc(100% - 16px);
+        max-width: calc(100% - 16px);
+    }
+
+    #title {
+        position: absolute;
+        left: 10%;
+        bottom: 7%;
+        color: white;
+        background: #111111;
+        border-radius: 20px;
+        border: solid 10px #111111;
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: 1.5em;
+    }
+
+    #title:hover {
+        text-decoration: underline;
+    }
+
   </style>
  </head>
 
  <body>
+   <a href="#" id="img_link"><img id="main_img"></a>
+   <a id="title">Helo</a>
    <script src='ntp.js'></script>
  </body>
 </html>

@@ -17,7 +17,7 @@ If I ever get the $5 to make a chrome store dev account, I'll put it on there an
 
 Go to the chrome extensions page and click options.
 
-You can change the subreddit, sorting method, and zooming method.
+You can change the subreddit and sorting methods.
 
 **Note:** You can select multiple subreddits by concatenating with `+`'s like: `movies+pics`.
 
@@ -27,7 +27,9 @@ Start an issue or put in a pull request, and I'll make sure to check it out.
 
 ##New Features
 
-- CSS3 transitions between images
-- More options
+- Black bg and actual image objects
+- Title box with link to comments
+- Link on image to source link
+- Imgur scraping
 - Basic image caching
 - An icon

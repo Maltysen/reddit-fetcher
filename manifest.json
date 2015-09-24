@@ -3,12 +3,12 @@
 
   "name": "Reddit Fetcher NTP",
   "description": "Makes the NTP background the latest image on a specified subreddit.",
-  "version": "0.2",
+  "version": "0.3",
 
   "icons": {
     "48": "icon48.png"
   },
-    
+
   "chrome_url_overrides" : {
     "newtab": "ntp.html"
   },
@@ -22,6 +22,6 @@
   "background": {
     "scripts": ["jquery-2.1.4.min.js", "fetcher.js"]
   },
-  
+
   "options_page": "options.html"
 }

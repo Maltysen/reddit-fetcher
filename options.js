@@ -6,12 +6,12 @@ function save_options() {
   chrome.storage.sync.set({
     subreddit: subreddit,
     sort: sort,
-    zoom: zoom
+    // zoom: zoom
   }, function() {
     fetcher=chrome.extension.getBackgroundPage()
         fetcher.subreddit = subreddit
         fetcher.sort = sort
-        fetcher.change_zoom(zoom)
+        // fetcher.change_zoom(zoom)
   });
 }
 
@@ -22,7 +22,7 @@ function restore_options() {
   chrome.storage.sync.get({
       subreddit: "pics",
       sort: "hot",
-      zoom: "cover"
+      zoom: "contain"
   }, function(items) {
     document.getElementById('subreddit').value = items.subreddit
     $("input[name=sort][value="+items.sort+"]").prop('checked', true)

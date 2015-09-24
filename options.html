@@ -7,19 +7,20 @@
   /r/
 </label>
 
-<input id='subreddit'>    
+<input id='subreddit'>
+<br><br><strong>Note</strong>: You can specify multiple subreddits with <code>+</code>'s. (e.g. <code>pics+movies</code>)
 <br><br>
 
 Sorting order:<br>
 <input type="radio" name="sort" value="hot"> Hot<br>
 <input type="radio" name="sort" value="new"> New
 <br><br>
-
+<!--
 Zooming Mode for Image:<br>
+<input type="radio" name="zoom" value="contain"> Center - Sets larger dimension to fit exactly, centers image, leaves whitespace. <br>
 <input type="radio" name="zoom" value="cover"> Cover - Set smaller dimension to fit exactly, lets rest of image outside of screen.<br>
-<input type="radio" name="zoom" value="contain"> Contain - Sets larger dimension to fit exactly, tiles other dimension. <br>
 <input type="radio" name="zoom" value="scale"> Scale - Changes aspect ratio, scales both dimensions to 100%.
-<br><br>
+<br><br> -->
 
 <button id="save">Save</button>
 
