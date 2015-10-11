@@ -1,28 +1,63 @@
 <html>
 <head><title>Settings for Reddit Fetcher Extension</title></head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <body>
 
-<label for="subreddit">
-  Subreddit:<br>
-  /r/
-</label>
+<div class='container'>
+    <h2 style="margin-bottom: 35px;">Options for Reddit Fetcher Extension</h2>
 
-<input id='subreddit'>
-<br><br><strong>Note</strong>: You can specify multiple subreddits with <code>+</code>'s. (e.g. <code>pics+movies</code>)
-<br><br>
+    <div class="well">
 
-Sorting order:<br>
-<input type="radio" name="sort" value="hot"> Hot<br>
-<input type="radio" name="sort" value="new"> New
-<br><br>
-<!--
-Zooming Mode for Image:<br>
-<input type="radio" name="zoom" value="contain"> Center - Sets larger dimension to fit exactly, centers image, leaves whitespace. <br>
-<input type="radio" name="zoom" value="cover"> Cover - Set smaller dimension to fit exactly, lets rest of image outside of screen.<br>
-<input type="radio" name="zoom" value="scale"> Scale - Changes aspect ratio, scales both dimensions to 100%.
-<br><br> -->
+        <div class="row">
+            <div class="col-md-6">
 
-<button id="save">Save</button>
+                <div class="alert alert-info" role="alert">
+                    <strong>Note</strong>:
+                    You can specify multiple subreddits with <code>+</code>'s. (e.g. <code>pics+movies</code>)</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+
+                <label for="subreddit">
+                  Subreddit:<br>
+                </label>
+
+                <div class="input-group">
+                    <span class="input-group-addon">/r/</span>
+                    <input class="form-control" id='subreddit'>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <label>Sorting order:</label><br>
+
+        <div class="radio">
+            <label><input type="radio" name="sort" value="hot"> Hot</label>
+        </div>
+
+        <div class="radio">
+            <label><input type="radio" name="sort" value="new"> New</label>
+        </div>
+
+
+        <br><br>
+        <!--
+        Zooming Mode for Image:<br>
+        <input type="radio" name="zoom" value="contain"> Center - Sets larger dimension to fit exactly, centers image, leaves whitespace. <br>
+        <input type="radio" name="zoom" value="cover"> Cover - Set smaller dimension to fit exactly, lets rest of image outside of screen.<br>
+        <input type="radio" name="zoom" value="scale"> Scale - Changes aspect ratio, scales both dimensions to 100%.
+        <br><br> -->
+
+        <button id="save"class="btn btn-primary">Save Options</button>
+    </div>
+</div>
 
 <script src="jquery-2.1.4.min.js"></script>
 <script src="options.js"></script>
